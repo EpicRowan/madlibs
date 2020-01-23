@@ -6,7 +6,20 @@
 <body>
 There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab.
 When {{ person }} went to pick it up, it burst into flames in a totally
-{{ adjective }} way.
+{{ adjective }} way. And then the {{ building }} fell into {{ place }} and dozens 
+of 
+{% for animal in animals %} 
+
+    {% if len(animals) ==3 %}
+        {{ animal + "and " + animal + "and " + animal}}
+    {% elif len(animals) ==2 %}
+        {{ animal + "and " + animal}}
+    {% else: %}
+    {{ animal }} 
+
+{% endif %}
+{% endfor %} appeared. 
+
 </body>
 </html>
 
